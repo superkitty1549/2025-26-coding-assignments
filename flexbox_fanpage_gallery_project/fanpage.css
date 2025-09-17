@@ -1,5 +1,3 @@
-/* 25:00, Nightcord Universal CSS - Improved Version */
-
 * { 
     margin: 0; 
     padding: 0; 
@@ -26,7 +24,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Layout */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,7 +47,7 @@ body {
 }
 
 .logo-image {
-    width: 120px;  /* Adjust this value to your preferred size */
+    width: 120px; 
     height: 45px;
     object-fit: cover;
     border-radius: 8px;
@@ -77,7 +74,6 @@ body {
     box-shadow: 0 5px 15px rgba(187, 134, 252, 0.4);
 }
 
-/* Main Content Container - Fixed spacing */
 .main-content {
     padding: 4rem 2rem;
     max-width: 1400px;
@@ -86,7 +82,6 @@ body {
     z-index: 100;
 }
 
-/* Hero Section - Contained and non-overlapping */
 .hero {
     height: 100vh;
     display: flex;
@@ -136,7 +131,6 @@ body {
     margin-bottom: 0.5rem;
 }
 
-/* Page Header for non-home pages */
 .page-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -157,7 +151,6 @@ body {
     opacity: 0.9;
 }
 
-/* Non-home pages get proper top padding */
 body:not(.home-page) .main-content {
     padding-top: 8rem;
 }
@@ -167,7 +160,6 @@ body:not(.home-page) .main-content {
     to { text-shadow: 0 0 50px rgba(187, 134, 252, 1); }
 }
 
-/* Section Containers - Proper spacing and z-index */
 .section {
     position: relative;
     z-index: 100;
@@ -179,7 +171,6 @@ body:not(.home-page) .main-content {
     margin-top: 2rem;
 }
 
-/* About Section - Fixed layout */
 #about {
     background: rgba(26, 0, 51, 0.4);
     border-radius: 20px;
@@ -249,7 +240,6 @@ body:not(.home-page) .main-content {
     box-shadow: 0 6px 20px rgba(187, 134, 252, 0.4);
 }
 
-/* Gallery Section */
 #gallery {
     background: rgba(74, 13, 153, 0.3);
     border-radius: 20px;
@@ -259,7 +249,6 @@ body:not(.home-page) .main-content {
     border: 1px solid rgba(187, 134, 252, 0.2);
 }
 
-/* Characters Section */
 #characters {
     background: rgba(26, 0, 51, 0.5);
     border-radius: 20px;
@@ -269,7 +258,6 @@ body:not(.home-page) .main-content {
     border: 1px solid rgba(187, 134, 252, 0.2);
 }
 
-/* Flex Components */
 .flex-grid {
     display: flex;
     gap: 2rem;
@@ -281,7 +269,6 @@ body:not(.home-page) .main-content {
     align-items: stretch; 
 }
 
-/* Cards */
 .card {
     background: rgba(26, 0, 51, 0.6);
     border: 1px solid rgba(187, 134, 252, 0.3);
@@ -297,7 +284,6 @@ body:not(.home-page) .main-content {
     background: rgba(26, 0, 51, 0.8);
 }
 
-/* Gallery Items */
 .gallery-item {
     flex: 0 1 350px;
     height: 300px;
@@ -351,7 +337,6 @@ body:not(.home-page) .main-content {
     margin: 0.2rem;
 }
 
-/* Members */
 .members-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, 1fr));
@@ -372,7 +357,7 @@ body:not(.home-page) .main-content {
     border: 1px solid rgba(187, 134, 252, 0.3);
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    margin: 0 auto; /* Centers cards horizontally */
+    margin: 0 auto;
 }
 
 .circle-stats {
@@ -414,7 +399,6 @@ body:not(.home-page) .main-content {
     }
 }
 
-/* Update responsive breakpoint */
 @media (max-width: 900px) {
     .members-grid {
         grid-template-columns: 1fr;
@@ -427,7 +411,6 @@ body:not(.home-page) .main-content {
     }
 }
 
-/* For mobile responsiveness */
 @media (max-width: 768px) {
     .members-grid {
         grid-template-columns: 1fr;
@@ -487,7 +470,6 @@ body:not(.home-page) .main-content {
     line-height: 1.8;
 }
 
-/* Character cards (smaller for homepage) */
 .character-card {
     flex: 1;
     min-width: 250px;
@@ -531,7 +513,6 @@ body:not(.home-page) .main-content {
     line-height: 1.6;
 }
 
-/* Footer - Proper positioning */
 .footer {
     background: rgba(26, 0, 51, 0.95);
     padding: 3rem 2rem;
@@ -579,7 +560,6 @@ body:not(.home-page) .main-content {
     text-shadow: 0 0 10px rgba(187, 134, 252, 0.8);
 }
 
-/* Section Headers */
 .section h2 {
     font-size: 3rem;
     color: #bb86fc;
@@ -588,7 +568,6 @@ body:not(.home-page) .main-content {
     text-shadow: 0 0 15px rgba(187, 134, 252, 0.5);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
@@ -603,7 +582,6 @@ body:not(.home-page) .main-content {
         font-size: 2.5rem; 
     }
     
-    /* Replace existing .flex-grid and gallery styles with: */
 
 .flex-grid {
     display: grid;
@@ -621,14 +599,14 @@ body:not(.home-page) .main-content {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    height: auto;  /* Changed from fixed height */
-    min-height: 350px; /* Added minimum height */
+    height: auto;  
+    min-height: 350px; 
     transition: transform 0.3s ease;
 }
 
 .song-image {
     width: 100%;
-    height: 180px;  /* Slightly reduced height */
+    height: 180px;  
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
@@ -646,11 +624,11 @@ body:not(.home-page) .main-content {
     font-size: 0.9rem;
     margin: 0;
     line-height: 1.4;
-    flex-grow: 1;  /* Added to push tags to bottom */
+    flex-grow: 1; 
 }
 
 .tags {
-    margin-top: auto;  /* Added to push tags to bottom */
+    margin-top: auto; 
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -664,7 +642,6 @@ body:not(.home-page) .main-content {
     color: #bb86fc;
 }
 
-/* Add responsive breakpoints */
 @media (max-width: 1200px) {
     .flex-grid {
         grid-template-columns: repeat(2, 1fr);

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="fanpage.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">
             <img src="img/logo.jpg" alt="Nightcord at 25:00 Logo" class="logo-image">
@@ -24,14 +23,12 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
         <div class="page-header">
             <h1>The People</h1>
             <p>Meet the four members of Nightcord.</p>
         </div>
 
-        <!-- Member Cards with align-items: stretch -->
         <div class="members-grid">
             <div class="member-card kanade-card">
                 <div class="member-content">
@@ -86,7 +83,6 @@
             </div>
         </div>
 
-        <!-- Circle Statistics -->
         <div class="circle-stats">
             <h2>Quotes</h2>
             <div class="stats-grid">
@@ -110,7 +106,6 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div>
@@ -122,7 +117,6 @@
     </footer>
 
     <script>
-        // Add some interactive animations
         document.querySelectorAll('.member-card').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-10px) scale(1.02)';
@@ -133,7 +127,6 @@
             });
         });
 
-        // Animate stats on scroll
         const observerOptions = {
             threshold: 0.5,
             rootMargin: '0px 0px -100px 0px'
@@ -155,7 +148,6 @@
 
         observer.observe(document.querySelector('.circle-stats'));
 
-        // Add CSS animation
         const style = document.createElement('style');
         style.textContent = `
             @keyframes fadeInUp {
