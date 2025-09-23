@@ -8,14 +8,56 @@
         h1 {
             color: #333;
             text-align: center;
+            overflow: hidden;
+            border-right: 3px solid #333;
+            white-space: nowrap;
+            margin: 0 auto;
+            font-size: 2em;
+            animation: 
+                typing 4s steps(40, end),
+                blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { 
+                width: 0; 
+            }
+            to { 
+                width: 100%; 
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to { 
+                border-color: transparent; 
+            }
+            50% { 
+                border-color: #333; 
+            }
         }
         h2 {
             color: #666;
             border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
+            text-align: center;
         }
         ul, ol, dl {
             margin: 20px 0;
+        }
+        ul {
+            list-style-type: square; 
+        }
+        
+        ol {
+            list-style-type: upper-roman;
+        }
+        
+        ul ul {
+            list-style-type: circle;
+        }
+        
+        ul ul ul {
+            list-style-type: disc;
         }
         dt {
             font-weight: bold;
