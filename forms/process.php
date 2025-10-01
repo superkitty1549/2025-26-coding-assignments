@@ -1,6 +1,6 @@
 <?php
 // GitHub Configuration
-define('GITHUB_TOKEN', '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'); 
+define('GITHUB_TOKEN', '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'); 
 define('GITHUB_USERNAME', 'superkitty1549');
 define('GITHUB_REPO', '2025-26-coding-assignments');
 define('FILE_PATH', 'forms/form_submissions.txt');
