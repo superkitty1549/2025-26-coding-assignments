@@ -130,3 +130,15 @@ Favorite Flavour: spicy
 Comments: This is amazing!
 =================================
 
+=================================
+FORM SUBMISSION
+Date: 2025-10-01 17:17:24
+=================================
+Name: superkitty
+Email: email@gmail.com
+Grade Level: Sophomore
+Favorite Colours: purple, grey, black, white
+Favorite Flavour: salty
+Comments: the web server wont let me change the input type for the email from text to email so oh well
+=================================
+
