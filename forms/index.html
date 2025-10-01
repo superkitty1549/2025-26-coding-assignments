@@ -12,41 +12,45 @@
         <form id="contactForm">
             
             <div class="form-group">
-                <label for="name">name</label>
-                <input type="text" id="name" name="name" placeholder="name" required>
+                <label for="name">preferred name</label>
+                <input type="text" id="name" name="name" placeholder="first/last" required>
             </div>
 
             <div class="form-group">
-                <label for="email">email</label>
-                <input type="email" id="email" name="email" placeholder="email" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="...@gmail.com" required>
             </div>
 
             <div class="form-group">
-                <label>grade level</label>
+                <label>Grade</label>
                 <div class="radio-group">
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="freshman" checked>
+                        <input type="radio" name="contact_method" value="freshman-9th" checked>
                         <span>Freshman</span>
                     </label>
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="sophomore">
+                        <input type="radio" name="contact_method" value="sophomore-10th">
                         <span>Sophomore</span>
                     </label>
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="junior">
+                        <input type="radio" name="contact_method" value="junior-11th">
                         <span>Junior</span>
                     </label>
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="senior">
+                        <input type="radio" name="contact_method" value="senior-12th">
                         <span>Senior</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="contact_method" value="other-13th+">
+                        <span>other</span>
                     </label>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Favourite colour(s)</label>
+                <label>Favourite Color(s)?</label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="colors" value="red">
+                    <input type="checkbox " name="colors" value="red">
                     <span>red</span>
                 </label>
                 <label class="checkbox-label">
@@ -70,7 +74,7 @@
                     <span>purple</span>
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="colors" value="grey">
+                    <input type="checkbox" name="colors" value="pink">
                     <span>grey</span>
                 </label>
                 <label class="checkbox-label">
@@ -78,27 +82,27 @@
                     <span>black</span>
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="colors" value="brown">
+                    <input type="checkbox" name="colors" value="cyan">
                     <span>brown</span>
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="colors" value="white">
+                    <input type="checkbox" name="colors" value="all">
                     <span>white</span>
                 </label>
                 <label class="checkbox-label">
-                    <input type="checkbox" name="colors" value="other">
+                    <input type="checkbox" name="colors" value="none">
                     <span>other</span>
                 </label>
             </div>
 
             <div class="form-group">
-                <label for="topic">favourite flavour</label>
+                <label for="topic">favourite food</label>
                 <select id="topic" name="topic" required>
                     <option value="">pick one</option>
-                    <option value="sweet">sweet</option>
-                    <option value="sour">sour</option>
-                    <option value="salty">salty</option>
-                    <option value="spicy">spicy</option>
+                    <option value="airplane">airplane</option>
+                    <option value="oatmeal">oatmeal</option>
+                    <option value="carbon steel">carbon steel</option>
+                    <option value="looking down">looking down</option>
                 </select>
             </div>
 
@@ -111,7 +115,7 @@
         </form>
 
         <div class="success-message" id="successMessage">
-            ok yay good job 🎉
+            you're did it :D
         </div>
     </div>
 
