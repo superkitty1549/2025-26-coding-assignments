@@ -1,0 +1,13 @@
+table, td{
+   color: rgb(255, 128, 176);
+    align-content: center
+}
+th{
+    background-color: rgb(255, 128, 176);
+    color:rgb(252, 216, 230)
+}
+table, td: hover{
+    
+    color: rgb(192, 48, 103);
+     align-content: center
+ }
