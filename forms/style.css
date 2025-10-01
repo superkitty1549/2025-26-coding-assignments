@@ -68,11 +68,16 @@
             min-height: 100px;
         }
 
-        .radio-group,
-        .checkbox-group {
+        .radio-group {
             display: flex;
-            gap: 20px;
-            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
         }
 
         input[type="radio"],

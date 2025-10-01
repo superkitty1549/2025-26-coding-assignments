@@ -1,35 +1,43 @@
 <?php
 // GitHub Configuration
-define('GITHUB_TOKEN', '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');
+define('GITHUB_TOKEN', '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'); 
 define('GITHUB_USERNAME', 'superkitty1549');
 define('GITHUB_REPO', '2025-26-coding-assignments');
-define('FILE_PATH', 'form_submissions.txt'); 
+define('FILE_PATH', 'form_submissions.txt');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
+    // Get form data and sanitize it
     $name = htmlspecialchars($_POST['name']);
     $email = htmlspecialchars($_POST['email']);
-    $contact_method = htmlspecialchars($_POST['contact_method']);
-    $subscribe = isset($_POST['subscribe']) ? 'Yes' : 'No';
-    $topic = htmlspecialchars($_POST['topic']);
-    $message = htmlspecialchars($_POST['message']);
+    $grade = htmlspecialchars($_POST['grade']);
     
+    // Get all selected colors
+    $colors = isset($_POST['colors']) ? implode(', ', array_map('htmlspecialchars', $_POST['colors'])) : 'None';
+    
+    $flavor = htmlspecialchars($_POST['flavor']);
+    $comments = isset($_POST['comments']) ? htmlspecialchars($_POST['comments']) : 'No comments';
+    
+    // Get current timestamp
     $timestamp = date('Y-m-d H:i:s');
     
+    // Format the new submission
     $newSubmission = "=================================\n";
     $newSubmission .= "FORM SUBMISSION\n";
     $newSubmission .= "Date: $timestamp\n";
     $newSubmission .= "=================================\n";
     $newSubmission .= "Name: $name\n";
     $newSubmission .= "Email: $email\n";
-    $newSubmission .= "Preferred Contact: $contact_method\n";
-    $newSubmission .= "Newsletter Subscribe: $subscribe\n";
-    $newSubmission .= "Topic: $topic\n";
-    $newSubmission .= "Message: $message\n";
+    $newSubmission .= "Grade Level: $grade\n";
+    $newSubmission .= "Favorite Colors: $colors\n";
+    $newSubmission .= "Favorite Flavor: $flavor\n";
+    $newSubmission .= "Comments: $comments\n";
     $newSubmission .= "=================================\n\n";
     
+    // GitHub API URL to get the file
     $apiUrl = "https://api.github.com/repos/" . GITHUB_USERNAME . "/" . GITHUB_REPO . "/contents/" . FILE_PATH;
     
+    // Initialize cURL to get existing file
     $ch = curl_init($apiUrl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
@@ -45,24 +53,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $existingContent = '';
     $sha = null;
     
+    // If file exists, get its content and SHA
     if ($httpCode == 200) {
         $fileData = json_decode($response, true);
         $sha = $fileData['sha'];
         $existingContent = base64_decode($fileData['content']);
     }
     
+    // Append new submission to existing content
     $updatedContent = $existingContent . $newSubmission;
     
+    // Prepare data for GitHub API
     $commitData = [
         'message' => 'New form submission - ' . $timestamp,
         'content' => base64_encode($updatedContent),
-        'branch' => 'main' 
+        'branch' => 'main'
     ];
     
+    // Add SHA if file exists (required for updates)
     if ($sha) {
         $commitData['sha'] = $sha;
     }
     
+    // Push to GitHub
     $ch = curl_init($apiUrl);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
@@ -78,7 +91,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pushHttpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
     
+    // Check if successful
     if ($pushHttpCode == 200 || $pushHttpCode == 201) {
+        // Success
         echo "<!DOCTYPE html>
         <html>
         <head>
@@ -121,6 +136,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </body>
         </html>";
     } else {
+        // Error
         $errorData = json_decode($pushResponse, true);
         echo "Error: Unable to save to GitHub. ";
         echo "HTTP Code: " . $pushHttpCode . "<br>";
@@ -128,6 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
 } else {
+    // If someone tries to access this page directly
     header("Location: index.html");
     exit();
 }

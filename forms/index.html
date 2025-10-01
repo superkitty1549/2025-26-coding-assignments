@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="form-container">
@@ -25,87 +24,88 @@
                 <label>grade level</label>
                 <div class="radio-group">
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="phone" checked>
+                        <input type="radio" name="grade" value="Freshman" checked>
                         <span>Freshman</span>
                     </label>
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="phone">
+                        <input type="radio" name="grade" value="Sophomore">
                         <span>Sophomore</span>
                     </label>
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="phone">
+                        <input type="radio" name="grade" value="Junior">
                         <span>Junior</span>
                     </label>
                     <label class="radio-label">
-                        <input type="radio" name="contact_method" value="phone">
+                        <input type="radio" name="grade" value="Senior">
                         <span>Senior</span>
                     </label>
                 </div>
             </div>
 
-
             <div class="form-group">
                 <label>Favourite colour(s)</label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>red</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>orange</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>yellow</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>green</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>blue</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>purple</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>grey</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>black</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>brown</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>white</span>
-                </label>
-                <label class="checkbox-label">
-                    <input type="checkbox" name="subscribe" value="yes">
-                    <span>other</span>
-                </label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="red">
+                        <span>red</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="orange">
+                        <span>orange</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="yellow">
+                        <span>yellow</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="green">
+                        <span>green</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="blue">
+                        <span>blue</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="purple">
+                        <span>purple</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="grey">
+                        <span>grey</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="black">
+                        <span>black</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="brown">
+                        <span>brown</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="white">
+                        <span>white</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="colors[]" value="other">
+                        <span>other</span>
+                    </label>
+                </div>
             </div>
 
             <div class="form-group">
-                <label for="topic">favourite flavour</label>
-                <select id="topic" name="topic" required>
+                <label for="flavor">favourite flavour</label>
+                <select id="flavor" name="flavor" required>
                     <option value="">pick one</option>
-                    <option value="general">sweet</option>
-                    <option value="support">sour</option>
-                    <option value="feedback">salty</option>
-                    <option value="other">spicy</option>
+                    <option value="sweet">sweet</option>
+                    <option value="sour">sour</option>
+                    <option value="salty">salty</option>
+                    <option value="spicy">spicy</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="message">Comments</label>
-                <textarea id="message" name="message" placeholder="(optional)" required></textarea>
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" placeholder="(optional)"></textarea>
             </div>
 
             <button type="submit" class="submit-btn">Submit</button>
