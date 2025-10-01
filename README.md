@@ -5,5 +5,4 @@ git add [folder_name] <br>
 git commit -m "code template upload" <br>
 git push origin lundynfaug <br>
 
-
-Forms link: https://somethingproject.infinityfree.me/
+<a href="https://somethingproject.infinityfree.me/" target="_blank">Forms link</a>
