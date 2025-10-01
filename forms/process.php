@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $newSubmission .= "Name: $name\n";
     $newSubmission .= "Email: $email\n";
     $newSubmission .= "Grade Level: $grade\n";
-    $newSubmission .= "Favorite Colors: $colors\n";
-    $newSubmission .= "Favorite Flavor: $flavor\n";
+    $newSubmission .= "Favorite Colours: $colors\n";
+    $newSubmission .= "Favorite Flavour: $flavor\n";
     $newSubmission .= "Comments: $comments\n";
     $newSubmission .= "=================================\n\n";
     
@@ -129,9 +129,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </head>
         <body>
             <div class='message'>
-                <h2>Thank You!</h2>
-                <p>Your form has been submitted and saved to GitHub successfully.</p>
-                <a href='index.html'>Back to Form</a>
+                <h2>thank u!!</h2>
+                <p>ur form has been submitted successfully :)</p>
+                <a href='index.html'>back to form <3 </a>
             </div>
         </body>
         </html>";
