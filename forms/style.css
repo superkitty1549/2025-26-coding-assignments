@@ -13,6 +13,18 @@
 .submit-btn{
 color:rgb(137, 215, 218) ;
 }
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    font-size: 24px;
+    color: rgb(137, 215, 218);
+    font-weight: 600;
+}
+
+.success-message.show {
+    display: block;
+}
 
 
 /*  the og css stuff
