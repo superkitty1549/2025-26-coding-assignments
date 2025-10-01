@@ -70,3 +70,15 @@ Favorite Flavor: salty
 Comments: this is so cool wow
 =================================
 
+=================================
+FORM SUBMISSION
+Date: 2025-09-30 23:56:04
+=================================
+Name: testing idk superkitty
+Email: testingstill@gmail.com
+Grade Level: Sophomore
+Favorite Colours: blue, purple, grey, black, white
+Favorite Flavour: salty
+Comments: pls work yay
+=================================
+
